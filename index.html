@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip-Calculator</title>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Space+Mono">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/stlye.css">
+</head>
+
+<body>
+    <div class="element">
+        <div class="pic text-center p-5  ">
+            <img src="./images/logo.svg" alt="">
+        </div>
+        <div class="card p-4">
+            <form>
+                <!-- first sub-card -->
+                <div class="first">
+                    <div class="mb-4">
+                        <h5 class="text-muted">Bill</h5>
+                        <div class=" bg-light rounded d-flex justify-content-between p-2 align-items-center">
+                            <div><img src="./images/icon-dollar.svg" alt=""></div>
+                            <input type="number" name="bill" id="billInput" class="bill">
+                        </div>
+                    </div>
+                    <!-- select tip -->
+
+                    <div>
+                        <h5 class="text-muted">Select Tip %</h5>
+                    </div>
+
+                    <!-- Tip % -->
+                    <div class=" num mb-4">
+                        <div class="child bg"><span class="fw-bolder fs-4" onclick="insert(5)">5%</span> </div>
+                        <div class="child bg"><span class="fw-bolder fs-4" onclick="insert(10)">10%</span> </div>
+                        <div class="child bb"><span class="fw-bolder fs-4" onclick="insert(15)">15%</span> </div>
+                        <div class="child bg"><span class="fw-bolder fs-4" onclick="insert(25)">25%</span> </div>
+                        <div class="child bg"><span class="fw-bolder fs-4" onclick="insert(50)">50%</span> </div>
+    
+                        <button class="child bgg" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="fw-bolder fs-4 text-muted" id="buttonText"> Custom</span>
+                        </button>
+                        <div class="drop dropdown-menu p-2" onclick="" aria-labelledby="dropdownMenuButton1">
+                            <input type="number" name="" id="customPercent" placeholder="input percentage">
+                            <div class="submit" onclick="submitCustom()">submit</div>
+                        </div>
+       
+                    </div>
+
+
+                    <!-- Number of people -->
+                    <div class="mb-4">
+                        <h5 class="text-muted">Number of People</h5>
+                        <div class="bg-light rounded d-flex justify-content-between p-2 align-items-center">
+                            <div><img src="./images/icon-person.svg" alt=""></div>
+                            <input type="number" name="people" id="peopleInput" class="bill">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- RESET CARD -->
+
+            <div class="reset p-4 ">
+                <div class="d-flex justify-content-between ">
+                    <p class="fw-bolder">Tip Amount <br> <span class="fw-light">/ person</span></p>
+                    <h1>&#36;<span id="amount">0</span></h1>
+                </div>
+                <div class="d-flex justify-content-between ">
+                    <p class="fw-bolder">Total <br> <span class="fw-light">/ person</span></p>
+                    <h1>&#36;<span id="total">0</span></h1>
+                </div>
+
+                <div class="txt text-center p-2 rounded fw-bolder fs-3 " onclick="resetAmount()">RESET</div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="tip.js"></script>
+</body>
+
+</html>

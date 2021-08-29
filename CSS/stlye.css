@@ -1,0 +1,139 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.element {
+    background-color: hsl(184, 44%, 78%);
+    height: 100vh;
+    font-family: space mono;
+    
+}
+
+.card{
+    border-radius: 10px;
+    /* height: 85vh; */
+    
+}
+
+.bill{
+    flex: 1;
+    text-align: right;
+    background-color: inherit;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    font-weight: bolder;
+}
+
+
+
+
+.num {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    
+}
+ 
+.child{
+    /* border: 1px solid green; */
+    padding: 8px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ button{
+    border: none;
+} 
+
+.bg{
+    background-color: hsl(183, 88%, 14%);
+    color: white;
+}
+.bg:hover{
+    background-color: hsl(183, 78%, 23%);
+}
+
+.bb{
+    background-color: hsl(172, 67%, 45%); 
+}
+.bb:hover{
+    background-color: hsl(172, 64%, 48%);
+}
+
+.bgg{
+    background-color: rgb(231, 231, 231);
+}
+.bgg:hover{
+    background-color: rgb(199, 199, 199);
+}
+
+/* dropdown section */
+#customPercent{
+    outline: none;
+}
+
+.submit{
+    background-color: hsl(183, 88%, 14%);
+    color: white;
+    text-align: center;
+}
+
+
+/* reset */
+
+.reset{
+    /* border: 1px solid green; */
+    border-radius: 10px;
+    background-color: hsl(183, 88%, 14%);
+}
+
+.txt{
+    /* border: 1px solid red; */
+    background-color: hsl(172, 67%, 45%);
+    cursor: pointer;
+}
+.txt:hover{
+    background-color: hsl(172, 64%, 48%);
+}
+
+h1{
+    color: hsl(172, 67%, 45%);
+}
+
+p{
+    color: white;
+}
+
+ /* destop view */
+ @media screen and (min-width: 1000px) {
+    .card{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        width: 60%;
+        margin: auto;
+        
+    }
+
+
+    form{
+        flex: 1;
+        margin-right: 4px;
+       
+    }
+
+    .reset{
+        flex: 1;
+        margin-left: 4px;
+    
+    }
+
+    
+     
+ }
